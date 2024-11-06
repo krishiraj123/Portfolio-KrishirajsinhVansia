@@ -43,3 +43,4 @@ C:\Users\krish\Desktop\Portfolio\myapp\Portfolio\bin\Debug\net8.0\ActiveUp.Net.S
 C:\Users\krish\Desktop\Portfolio\myapp\Portfolio\bin\Debug\net8.0\ActiveUp.Net.WhoIs.dll
 C:\Users\krish\Desktop\Portfolio\myapp\Portfolio\bin\Debug\net8.0\MimeKit.dll
 C:\Users\krish\Desktop\Portfolio\myapp\Portfolio\obj\Debug\net8.0\Portfolio.csproj.Up2Date
+C:\Users\krish\Desktop\Portfolio\myapp\Portfolio\obj\Debug\net8.0\Portfolio.sourcelink.json
