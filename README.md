@@ -10,9 +10,8 @@ This portfolio website includes sections on my professional experience, skill se
 
 The site is developed using:
 
-- **Frontend**: React.js, Tailwind CSS
-- **Backend**: Node.js, Express.js, MongoDB
-- **APIs & Libraries**: Axios for API calls, CORS for handling cross-origin requests
+- **Frontend**: ASP.NET CORE MVC, Bootstrap5
+- **Backend**: MailTo, MS SQL
 
 ## 🎯 Features
 
