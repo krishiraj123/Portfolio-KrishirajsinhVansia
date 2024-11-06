@@ -1,0 +1,140 @@
+@model Portfolio.Models.ContactFormModel
+
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<main class="main">
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+        <div class="heading">
+            <div class="container">
+                <div class="row d-flex justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h1>Contact</h1>
+                        <p class="mb-0">I’d love to hear from you! Whether you have questions, feedback, or just want to connect, feel free to reach out. Please fill out the form below, and I will get back to you as soon as possible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li>
+                        <a asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="current">Contact</li>
+                </ol>
+            </div>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+                <div class="col-md-6">
+                    <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+                        <i class="icon bi bi-geo-alt flex-shrink-0"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>Rajkot, Gujarat, India</p>
+                        </div>
+                    </div>
+                </div><!-- End Info Item -->
+
+                <div class="col-md-6">
+                    <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
+                        <i class="icon bi bi-telephone flex-shrink-0"></i>
+                        <div>
+                            <h3>Call Me</h3>
+                            <p>+91 9426557016</p>
+                        </div>
+                    </div>
+                </div><!-- End Info Item -->
+
+                <div class="col-md-6">
+                    <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
+                        <i class="icon bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>krishirajvansia123@gmail.com</p>
+                        </div>
+                    </div>
+                </div><!-- End Info Item -->
+
+                <div class="col-md-6">
+                    <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
+                        <i class="icon bi bi-share flex-shrink-0"></i>
+                        <div>
+                            <h3>Social Profiles</h3>
+                            <div class="social-links">
+                                <a href="https://x.com/Krishiraj123"><i class="bi bi-twitter-x"></i></a>
+                                <a href="https://github.com/krishiraj123">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/krishirajsinh-vansia-b97139263/">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJTHVwsbKrmVRPTNPHNPVMhFzhpHjWJvrWvjrtbmzKwdtHbqNhxMkNbNGsZlgvSPSNCkfvq">
+                                    <i class="bi bi-envelope-at"></i>
+                                </a>
+                                <a href="https://www.instagram.com/krishiraj123/">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Info Item -->
+
+            </div>
+
+            @if (TempData["SuccessMessage"] != null)
+            {
+            <div class="mt-3 alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["SuccessMessage"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            }
+            
+            <div class="mt-5">
+                <form asp-controller="Home" asp-action="SendEmail" method="post" data-aos="fade-up" data-aos-delay="600">
+                    <div class="row gy-4">
+                        <div class="col-md-6 position-relative">
+                            <label class="form-label" for="name">Your Name</label>
+                            <input type="text" name="name" class="form-control bg-dark text-light border border-secondary" id="name" required>
+                        </div>
+
+                        <div class="col-md-6 position-relative">
+                            <label class="form-label" for="email">Your Email</label>
+                            <input type="email" name="email" class="form-control bg-dark text-light border border-secondary" id="email" required>
+                        </div>
+
+                        <div class="col-md-12 position-relative">
+                            <label class="form-label" for="subject">Subject</label>
+                            <input type="text" name="subject" class="form-control bg-dark text-light border border-secondary" id="subject" required>
+                        </div>
+
+                        <div class="col-md-12 position-relative">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea name="message" class="form-control bg-dark text-light border border-secondary" rows="6" id="message" required></textarea>
+                        </div>
+
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-success rounded-5">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+    </section><!-- /Contact Section -->
+</main>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
